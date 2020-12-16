@@ -86,6 +86,12 @@ services:
         tags:
             - {name: ezplatform.cache_response_tagger}
 
+    ezplatform.view_cache.response_tagger.content_download:
+        class: EzSystems\PlatformHttpCacheBundle\ResponseTagger\Value\ContentDownloadTagger
+        parent: ezplatform.view_cache.response_tagger.abstract_value
+        tags:
+            - {name: ezplatform.cache_response_tagger}
+
     ezplatform.view_cache.response_tagger.location:
         class: EzSystems\PlatformHttpCacheBundle\ResponseTagger\Value\LocationTagger
         parent: ezplatform.view_cache.response_tagger.abstract_value
